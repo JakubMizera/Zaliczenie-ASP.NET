@@ -34,6 +34,7 @@ namespace Zaliczenie_ASP_NET.Controllers
             {
                 _db.Products.Add(obj);
                 _db.SaveChanges();
+                TempData["success"] = "Product created successfully";
                 return RedirectToAction("Index");
             }
             return View(obj);
@@ -65,6 +66,7 @@ namespace Zaliczenie_ASP_NET.Controllers
             {
                 _db.Products.Update(obj);
                 _db.SaveChanges();
+                TempData["success"] = "Product edited successfully";
                 return RedirectToAction("Index");
             }
             return View(obj);
@@ -100,7 +102,7 @@ namespace Zaliczenie_ASP_NET.Controllers
 
             _db.Products.Remove(obj);
             _db.SaveChanges();
-            TempData["success"] = "Category deleted";
+            TempData["success"] = "Product deleted successfully";
             return RedirectToAction("Index");
         }
     }
