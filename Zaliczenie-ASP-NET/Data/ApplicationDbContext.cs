@@ -11,5 +11,6 @@ namespace Zaliczenie_ASP_NET.Data
         }
 
         public DbSet<Products> Products { get; set; }   
+        public DbSet<Login> Login { get; set; }   
     }
 }

@@ -4,7 +4,7 @@
 
 namespace Zaliczenie_ASP_NET.Migrations
 {
-    public partial class AddProductsToDatabase : Migration
+    public partial class AddModels : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

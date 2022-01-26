@@ -1,0 +1,44 @@
+﻿@model Login
+
+<form method="post">
+	<div class="border-bottom p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-primary">Create profile</h2>
+		</div>
+		<div asp-validation-summary="All"></div>
+		<div class="mb-3">
+			<label asp-for="FirstName"></label>
+			<input asp-for="FirstName" class="form-control" />
+			<span asp-validation-for="FirstName" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="LastName"></label>
+			<input asp-for="LastName" class="form-control" />
+			<span asp-validation-for="LastName" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="EmailAdress"></label>
+			<input type="email" asp-for="EmailAdress" class="form-control" />
+			<span asp-validation-for="EmailAdress" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="Password"></label>
+			<input type="password" asp-for="Password" class="form-control" />
+			<span asp-validation-for="Password" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="ConfirmPassword"></label>
+			<input type="password" asp-for="ConfirmPassword" class="form-control" />
+			<span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+		</div>
+		<button type="submit" class="btn btn-primary" style="width:150px">Create profile</button>
+		<a asp-controller="Login" asp-action="Index" class="btn-primary btn" style="width:150px">Back to registry</a>
+	</div>
+</form>
+
+@*front-end validation*@
+@section Scripts {
+@{
+	<partial name="_ValidationScriptsPartial" />
+}
+}

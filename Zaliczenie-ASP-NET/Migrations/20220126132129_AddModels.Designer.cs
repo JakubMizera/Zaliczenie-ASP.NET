@@ -11,8 +11,8 @@ using Zaliczenie_ASP_NET.Data;
 namespace Zaliczenie_ASP_NET.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220126110629_AddProductsToDatabase")]
-    partial class AddProductsToDatabase
+    [Migration("20220126132129_AddModels")]
+    partial class AddModels
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

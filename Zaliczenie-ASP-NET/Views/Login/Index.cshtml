@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Login>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="text-primary">Welcome, please create your account</h1>
+
+<a asp-controller="Login" asp-action="Create" class="btn-primary btn" style="width:150px">Click here to registry</a>
+
+@*front-end validation*@
+@section Scripts {
+@{
+	<partial name="_ValidationScriptsPartial" />
+}
+}
