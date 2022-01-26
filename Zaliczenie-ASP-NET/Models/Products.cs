@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace Zaliczenie_ASP_NET.Models
 {
@@ -6,6 +7,7 @@ namespace Zaliczenie_ASP_NET.Models
     {
         [Key]
         public int Id { get; set; }
+        [DisplayName("Display order")]
         public int DisplayOrder { get; set; }
         [Required]
         public string Name { get; set; }
